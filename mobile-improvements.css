@@ -9,7 +9,13 @@
 .hero-logo-frame{width:min(92%,920px);height:auto;object-fit:contain}
 .footer-logo-link{display:block;width:190px}.footer-logo-image{display:block;width:100%;height:auto;filter:none}
 
+:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+.skip-link{position:fixed;z-index:100;top:12px;left:12px;padding:10px 14px;color:#fff;background:var(--ink);border-radius:4px;transform:translateY(-160%)}
+.skip-link:focus{transform:translateY(0)}
+.menu-button:focus-visible{border-radius:4px}
+
 @media(max-width:760px){
+  body.menu-open{overflow:hidden}
   .hero-art{height:auto;min-height:0;overflow:hidden;background:#fff;padding:18px 14px}
   .hero-logo-frame{width:100%;max-width:560px}
   .hero-copy{padding:34px 22px 34px}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rasuda.github.io/Orenji-site/sitemap.xml

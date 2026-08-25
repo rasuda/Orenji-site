@@ -1,16 +1,48 @@
 const menuButton = document.querySelector(".menu-button");
 const navigation = document.querySelector(".nav");
+const menuLabel = menuButton?.querySelector(".sr-only");
+
+const setMenuState = (open) => {
+  navigation?.classList.toggle("open", open);
+  menuButton?.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
+
+  if (menuLabel) {
+    menuLabel.textContent = open ? "Fechar menu" : "Abrir menu";
+  }
+};
 
 menuButton?.addEventListener("click", () => {
-  const open = navigation?.classList.toggle("open") ?? false;
-  menuButton.setAttribute("aria-expanded", String(open));
+  setMenuState(!navigation?.classList.contains("open"));
 });
 
 navigation?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navigation.classList.remove("open");
-    menuButton?.setAttribute("aria-expanded", "false");
+    setMenuState(false);
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navigation?.classList.contains("open")) {
+    setMenuState(false);
+    menuButton?.focus();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    navigation?.classList.contains("open") &&
+    !navigation.contains(event.target) &&
+    !menuButton?.contains(event.target)
+  ) {
+    setMenuState(false);
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) {
+    setMenuState(false);
+  }
 });
 
 document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
