@@ -7,6 +7,7 @@
 .contact-links a:last-child{display:inline-flex;width:max-content;align-items:center;padding:11px 16px;border:1px solid var(--teal);border-radius:3px;background:var(--teal);color:#fff}
 .hero-brand-copy{display:none}
 .hero-logo-frame{width:min(92%,920px);height:auto;object-fit:contain}
+.footer-logo-link{display:block;width:190px}.footer-logo-image{display:block;width:100%;height:auto;filter:none}
 
 @media(max-width:760px){
   .hero-art{height:auto;min-height:0;overflow:hidden;background:#fff;padding:18px 14px}
@@ -22,5 +23,5 @@
   .about-mark{font-size:96px;height:82px;line-height:.8;margin:0 0 34px;letter-spacing:-.1em}
   .about-copy{position:relative;z-index:2}
   .contact-links a:last-child{padding:13px 18px}
-  .footer-brand{margin-bottom:8px}
+  .footer-logo-link{width:min(78vw,300px);margin-bottom:8px}
 }
