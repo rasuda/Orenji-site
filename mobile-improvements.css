@@ -1,0 +1,22 @@
+.swipe-hint{display:none}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff}
+.footer-brand>span{width:46px;height:46px;border:7px solid var(--orange);border-radius:50%;font-size:0;position:relative}
+.footer-brand>span:after{content:"";position:absolute;width:8px;height:8px;background:var(--orange);right:-9px;top:10px}
+.footer-brand strong{font-size:24px;line-height:.9}
+.footer-brand small{display:block;font-size:7px;letter-spacing:.13em;color:#aaa;margin-top:7px}
+.contact-links a:last-child{display:inline-flex;width:max-content;align-items:center;padding:11px 16px;border:1px solid var(--teal);border-radius:3px;background:var(--teal);color:#fff}
+
+@media(max-width:760px){
+  .hero-art{height:290px;min-height:290px}
+  .orange-mark{transform:scale(.5);top:-42px}
+  .hero-copy{padding:38px 22px 34px}
+  .hero h1{font-size:clamp(43px,13vw,58px);line-height:.94}
+  .hero-text,.section-intro>p:last-child,.about-copy>p:not(.kicker),.contact-copy>p:not(.kicker){font-size:16px;line-height:1.55}
+  .pillars article p,.solution-card p,.case-list h3,.insight-grid h3{line-height:1.5}
+  .swipe-hint{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px;color:var(--orange);font-size:12px;font-weight:800}
+  .swipe-hint span{font-size:20px}
+  .solution-grid{padding-bottom:12px}
+  .solution-grid:after{content:"";min-width:10px}
+  .contact-links a:last-child{padding:13px 18px}
+  .footer-brand{margin-bottom:8px}
+}
