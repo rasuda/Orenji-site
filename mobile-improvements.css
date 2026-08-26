@@ -18,8 +18,8 @@
 @media(max-width:760px){
   body.menu-open{overflow:hidden}
   .site-header{height:64px;padding:0 16px;background:rgba(255,255,255,.94);border-bottom:1px solid rgba(31,31,36,.08);box-shadow:0 4px 18px rgba(31,31,36,.06)}
-  .brand{display:block;width:42px;height:42px}
-  .brand img{display:block;width:42px;height:42px;object-fit:contain}
+  .site-header .brand{display:flex;width:42px;height:64px;align-items:center;justify-content:center}
+  .site-header .brand img{display:block;width:34px;height:44px;object-fit:contain}
   .menu-button{width:44px;height:44px;padding:10px;border:1px solid rgba(31,31,36,.1);border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(31,31,36,.06)}
   .menu-button span{width:21px;margin:4px auto}
   .nav{inset:64px 0 auto}
