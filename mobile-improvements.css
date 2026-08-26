@@ -9,9 +9,7 @@
 .hero-logo-frame{width:min(92%,920px);height:auto;object-fit:contain}
 .footer-logo-link{display:block;width:190px}.footer-logo-image{display:block;width:100%;height:auto;filter:none}
 .site-header .brand img{width:54px;height:64px;object-fit:contain}
-.arrow-icon{position:relative;display:inline-block;width:14px;height:14px;flex:none}
-.arrow-icon:before{content:"";position:absolute;top:1px;right:1px;width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor}
-.arrow-icon:after{content:"";position:absolute;top:8px;right:2px;width:11px;height:2px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.arrow-icon{display:inline-block;width:15px;height:15px;flex:none;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 13 13 3M6 3h7v7' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 13 13 3M6 3h7v7' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
 .solution-dots{display:none}
 
 :focus-visible{outline:3px solid var(--teal);outline-offset:4px}
