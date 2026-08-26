@@ -16,6 +16,12 @@
 
 @media(max-width:760px){
   body.menu-open{overflow:hidden}
+  .site-header{height:64px;padding:0 16px;background:rgba(255,255,255,.94);border-bottom:1px solid rgba(31,31,36,.08);box-shadow:0 4px 18px rgba(31,31,36,.06)}
+  .brand,.brand picture{display:block;width:42px;height:42px}
+  .brand img{display:block;width:42px;height:42px;object-fit:contain}
+  .menu-button{width:44px;height:44px;padding:10px;border:1px solid rgba(31,31,36,.1);border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(31,31,36,.06)}
+  .menu-button span{width:21px;margin:4px auto}
+  .nav{inset:64px 0 auto}
   .hero-art{height:auto;min-height:0;overflow:hidden;background:#fff;padding:18px 14px}
   .hero-logo-frame{width:100%;max-width:560px}
   .hero-copy{padding:34px 22px 34px}
