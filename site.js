@@ -45,6 +45,39 @@ window.addEventListener("resize", () => {
   }
 });
 
+const solutionGrid = document.querySelector(".solution-grid");
+const solutionCards = [...document.querySelectorAll(".solution-card")];
+const solutionDots = [...document.querySelectorAll(".solution-dot")];
+
+const updateSolutionDots = () => {
+  if (!solutionGrid || window.innerWidth > 760) return;
+
+  const activeIndex = solutionCards.reduce((closest, card, index) => {
+    const currentDistance = Math.abs(card.offsetLeft - solutionGrid.scrollLeft);
+    const closestDistance = Math.abs(
+      solutionCards[closest].offsetLeft - solutionGrid.scrollLeft,
+    );
+    return currentDistance < closestDistance ? index : closest;
+  }, 0);
+
+  solutionDots.forEach((dot, index) => {
+    const active = index === activeIndex;
+    dot.classList.toggle("active", active);
+    dot.setAttribute("aria-current", active ? "true" : "false");
+  });
+};
+
+solutionGrid?.addEventListener("scroll", updateSolutionDots, { passive: true });
+solutionDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    solutionCards[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  });
+});
+
 document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
