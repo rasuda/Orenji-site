@@ -8,6 +8,7 @@
 .hero-brand-copy{display:none}
 .hero-logo-frame{width:min(92%,920px);height:auto;object-fit:contain}
 .footer-logo-link{display:block;width:190px}.footer-logo-image{display:block;width:100%;height:auto;filter:none}
+.site-header .brand img{width:54px;height:64px;object-fit:contain}
 
 :focus-visible{outline:3px solid var(--teal);outline-offset:4px}
 .skip-link{position:fixed;z-index:100;top:12px;left:12px;padding:10px 14px;color:#fff;background:var(--ink);border-radius:4px;transform:translateY(-160%)}
@@ -17,7 +18,7 @@
 @media(max-width:760px){
   body.menu-open{overflow:hidden}
   .site-header{height:64px;padding:0 16px;background:rgba(255,255,255,.94);border-bottom:1px solid rgba(31,31,36,.08);box-shadow:0 4px 18px rgba(31,31,36,.06)}
-  .brand,.brand picture{display:block;width:42px;height:42px}
+  .brand{display:block;width:42px;height:42px}
   .brand img{display:block;width:42px;height:42px;object-fit:contain}
   .menu-button{width:44px;height:44px;padding:10px;border:1px solid rgba(31,31,36,.1);border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(31,31,36,.06)}
   .menu-button span{width:21px;margin:4px auto}
