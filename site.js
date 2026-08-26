@@ -53,5 +53,5 @@ document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
   const challenge = String(form.get("challenge") || "");
   const subject = encodeURIComponent(`Contato pelo site Orenji — ${company || name}`);
   const body = encodeURIComponent(`Olá, sou ${name}${company ? `, da empresa ${company}` : ""}.\n\n${challenge}`);
-  window.location.href = `mailto:contato@orenji.com.br?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:orenjidatascience@gmail.com?subject=${subject}&body=${body}`;
 });
