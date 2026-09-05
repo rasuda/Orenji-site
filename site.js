@@ -240,8 +240,9 @@ const initMotion = () => {
     });
 
     gsap.utils.toArray("[data-reveal-group]").forEach((group) => {
+      const mobilePillars = window.innerWidth <= 760 && group.classList.contains("pillars");
       gsap.from(group.children, {
-        y: 42,
+        y: mobilePillars ? 0 : 42,
         opacity: 0,
         duration: 0.8,
         stagger: 0.1,
