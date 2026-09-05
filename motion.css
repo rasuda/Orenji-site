@@ -33,7 +33,7 @@ main{isolation:isolate;overflow:clip}
 .hero-sequence{will-change:transform,opacity}
 .hero-art{display:grid;place-items:center;isolation:isolate;overflow:hidden}
 .hero-logo-mask{position:relative;z-index:2;width:min(88%,850px);overflow:hidden;clip-path:inset(0 0 0 0 round 2px)}
-.hero-logo-frame{width:100%;filter:drop-shadow(0 30px 44px rgba(31,31,36,.14));will-change:transform}
+.hero-logo-frame{width:100%;filter:none;mix-blend-mode:multiply;will-change:transform}
 .hero-orbit{position:absolute;z-index:1;border:1px solid rgba(255,122,0,.2);border-radius:50%;pointer-events:none}
 .orbit-one{width:min(38vw,560px);aspect-ratio:1;transform:rotate(-18deg) scaleY(.38)}
 .orbit-one:before,.orbit-two:before{content:"";position:absolute;top:48%;left:-5px;width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 20px var(--orange)}
@@ -116,7 +116,7 @@ main{isolation:isolate;overflow:clip}
   .data-canvas{opacity:.42}
   .hero-art{min-height:310px!important;padding:24px 14px 6px}
   .hero-logo-mask{width:min(78%,420px)}
-  .hero-logo-frame{filter:drop-shadow(0 18px 28px rgba(31,31,36,.12))}
+  .hero-logo-frame{filter:none}
   .hero-orbit{display:none}
   .hero-index{right:20px;bottom:12px;font-size:8px}
   .hero-copy{padding-top:42px;padding-bottom:52px}
@@ -125,6 +125,8 @@ main{isolation:isolate;overflow:clip}
   .button.secondary{border-color:transparent;padding-left:4px;padding-right:4px;min-height:42px}
   .button:hover,.contact-links a:last-child:hover{transform:none;box-shadow:none}
   .pillars article:hover,.solution-card:hover,.case-list article:hover,.insight-grid article:hover{transform:none}
+  .pillars{overflow:hidden;padding-bottom:8px}
+  .pillars article:last-child{padding-bottom:30px}
   .tech-marquee{padding:13px 0}
   .marquee-track{gap:22px;animation-duration:38s;font-size:9px}
   .solutions:before{display:none}
