@@ -47,7 +47,7 @@ main{isolation:isolate;overflow:clip}
 .button:hover:before,.contact-links a:last-child:hover:before{transform:translateX(120%)}
 .button>*{position:relative}
 
-.pillars{position:relative;z-index:3}
+.pillars{position:relative;z-index:3;overflow:hidden}
 .pillars article{transition:background .4s,transform .4s var(--ease-premium)}
 .pillars article:hover{background:#fbfaf7;transform:translateY(-4px)}
 .pillar-icon{transition:transform .45s var(--ease-premium),background .35s,color .35s}
